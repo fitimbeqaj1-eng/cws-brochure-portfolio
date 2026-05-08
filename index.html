@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CWS Brochure Portfolio</title>
+    <link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=mobile-optimized" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CWS Brochure Portfolio home">
+        <img class="brand-logo" src="assets/images/logos/foot-branding.svg" alt="Creative Web Services" />
+      </a>
+      <nav aria-label="Portfolio sections">
+        <a href="#viewer">Interactive</a>
+        <a href="#work">Designs</a>
+        <a class="header-cta" href="#share">Contact CWS</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Creative Web Services</p>
+          <h1 id="hero-title">CWS brochure portfolio.</h1>
+          <p>
+            A curated CWS portfolio experience for previewing brochure design
+            work without sending full production PDFs.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#viewer">View Interactive Brochure</a>
+            <a class="secondary-action" href="#work">Browse Samples</a>
+          </div>
+        </div>
+        <div class="hero-stack" aria-hidden="true">
+          <img
+            class="hero-print hero-print-one"
+            src="assets/images/thumbnails/a-brighter-alternative-outside.png"
+            alt=""
+          />
+          <img
+            class="hero-print hero-print-two"
+            src="assets/images/thumbnails/argo-aba-inside.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Portfolio overview">
+        <div>
+          <strong>16</strong>
+          <span>featured brochure sets</span>
+        </div>
+        <div>
+          <strong>32</strong>
+          <span>rendered presentation views</span>
+        </div>
+        <div>
+          <strong>10+</strong>
+          <span>years of design experience</span>
+        </div>
+      </section>
+
+      <section class="viewer-section" id="viewer" aria-labelledby="viewer-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive brochure preview</p>
+          <h2 id="viewer-title">Scroll. Select. Fold. Be blown away.</h2>
+        </div>
+
+        <div class="viewer-layout">
+          <aside class="viewer-controls" aria-label="Brochure controls">
+            <div class="segmented" role="group" aria-label="Choose brochure side">
+              <button class="is-active" type="button" data-side="outside">Outside</button>
+              <button type="button" data-side="inside">Inside</button>
+            </div>
+
+            <div class="button-row">
+              <button class="icon-button" type="button" id="closeBrochure" aria-label="Close brochure">
+                <span aria-hidden="true">↤</span>
+                Close
+              </button>
+              <button class="icon-button" type="button" id="openBrochure" aria-label="Open brochure">
+                Open
+                <span aria-hidden="true">↦</span>
+              </button>
+            </div>
+
+            <label class="range-label" for="foldRange">
+              Fold
+              <span id="foldValue">100%</span>
+            </label>
+            <input id="foldRange" type="range" min="0" max="100" value="100" />
+          </aside>
+
+          <div class="stage-wrap">
+            <div class="stage-shadow"></div>
+            <div class="trifold" id="trifold" aria-label="Interactive brochure preview">
+              <div class="panel panel-left"></div>
+              <div class="panel panel-center"></div>
+              <div class="panel panel-right"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="brochure-carousel-wrap" aria-label="Choose a brochure to preview">
+          <div class="carousel-heading">
+            <strong>Choose a brochure</strong>
+            <span>Scroll through the CWS samples and click a card to preview it above.</span>
+          </div>
+          <div class="carousel-shell">
+            <button class="carousel-control" type="button" id="carouselPrev" aria-label="Previous brochure">
+              ‹
+            </button>
+            <div class="brochure-carousel" id="brochureCarousel">
+              <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+            <button class="carousel-control" type="button" id="carouselNext" aria-label="Next brochure">
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio gallery</p>
+          <h2 id="work-title">Print pieces designed to make the handoff easy</h2>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </section>
+
+      <footer class="site-footer" id="share" aria-labelledby="footer-title">
+        <div class="footer-main">
+          <div class="footer-brand-block">
+            <h2 id="footer-title">A better way to show brochure samples</h2>
+            <p>
+              A curated viewing experience for clients to preview polished
+              brochure work without receiving editable or full-resolution source PDFs.
+            </p>
+            <img class="footer-branding" src="assets/images/logos/foot-branding.svg" alt="Creative Web Services" />
+          </div>
+
+          <div class="footer-columns" aria-label="CWS contact and services">
+            <div class="footer-column">
+              <h3>Let’s talk innovation</h3>
+              <a href="tel:12012126367">201-212-6367</a>
+              <a href="mailto:info@cwsio.com">info@cwsio.com</a>
+              <a href="https://www.cwsio.com/" target="_blank" rel="noreferrer">cwsio.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© Creative Web Services</span>
+          <a href="https://www.cwsio.com/website-maintenance-plans/" target="_blank" rel="noreferrer">Website maintenance plans</a>
+          <a href="https://www.cwsio.com/terms-of-service/" target="_blank" rel="noreferrer">Terms of Service</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js?v=organized-assets"></script>
+  </body>
+</html>
