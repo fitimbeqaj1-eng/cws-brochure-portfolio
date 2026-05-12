@@ -414,7 +414,7 @@ function renderCarousel() {
 }
 
 function renderGrid() {
-  grid.innerHTML = brochures
+  grid.innerHTML = trifoldBrochures
     .map((brochure) => {
       const detailUrl = `brochure.html?id=${brochure.id}`;
 
