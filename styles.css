@@ -201,8 +201,9 @@ h1,
 }
 
 h1 {
-  font-size: clamp(2.9rem, 5.45vw, 5.35rem);
-  max-width: 1180px;
+  font-size: clamp(2.05rem, 2.72vw, 3.15rem);
+  line-height: 1.1;
+  max-width: 860px;
 }
 
 h2 {
@@ -296,36 +297,20 @@ h2 {
   width: min(70%, 620px);
 }
 
-.intro-band {
+.intro-copy {
   background: linear-gradient(90deg, #151832, #242954 52%, #303766);
   color: white;
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+  padding: clamp(40px, 7vw, 82px) clamp(18px, 5vw, 72px);
 }
 
-.intro-band div {
-  background: rgba(255, 255, 255, 0.035);
-  border-right: 1px solid rgba(174, 204, 255, 0.12);
-  padding: clamp(22px, 5vw, 46px);
-}
-
-.intro-band div:last-child {
-  border-right: 0;
-}
-
-.intro-band strong {
-  color: #f4f7ff;
-  display: block;
-  font-size: clamp(2.1rem, 5vw, 5rem);
-  line-height: 1;
-}
-
-.intro-band span {
-  color: rgba(255, 255, 255, 0.72);
-  display: block;
-  font-weight: 700;
-  margin-top: 8px;
+.intro-copy p {
+  color: rgba(238, 246, 255, 0.82);
+  font-size: clamp(1rem, 1.42vw, 1.24rem);
+  font-weight: 400;
+  line-height: 1.62;
+  margin: 0 auto;
+  max-width: 980px;
+  text-align: center;
 }
 
 .viewer-section,
@@ -341,6 +326,10 @@ h2 {
   font-size: clamp(2.1rem, 4.35vw, 4.1rem);
   max-width: none;
   white-space: nowrap;
+}
+
+.work-section .section-heading h2 {
+  max-width: none;
 }
 
 .viewer-layout {
@@ -927,7 +916,7 @@ input[type="range"] {
   }
 
   h1 {
-    font-size: clamp(3.3rem, 17vw, 5.2rem);
+    font-size: clamp(2.05rem, 9.5vw, 3.05rem);
   }
 
   .hero-stack {
@@ -949,7 +938,6 @@ input[type="range"] {
     max-width: none;
   }
 
-  .intro-band,
   .portfolio-grid,
   .footer-columns {
     grid-template-columns: 1fr;
@@ -1267,8 +1255,8 @@ body {
   }
 
   h1 {
-    font-size: clamp(2.35rem, 9.4vw, 3.8rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 7.8vw, 3.15rem);
+    line-height: 1.06;
   }
 
   h2,
@@ -1302,13 +1290,6 @@ body {
     min-height: clamp(280px, 78vw, 430px);
   }
 
-  .intro-band div {
-    padding: 24px 18px;
-  }
-
-  .intro-band strong {
-    font-size: clamp(2.4rem, 14vw, 4.2rem);
-  }
 
   .viewer-controls {
     gap: 12px;
@@ -1396,7 +1377,7 @@ body {
   }
 
   h1 {
-    font-size: clamp(2.05rem, 10.5vw, 3rem);
+    font-size: clamp(1.82rem, 8.7vw, 2.45rem);
   }
 
   .hero,
