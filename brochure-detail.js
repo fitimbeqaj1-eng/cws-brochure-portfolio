@@ -127,8 +127,8 @@ function renderDetail(brochure) {
     <footer class="site-footer detail-footer" id="share" aria-labelledby="detail-footer-title">
       <div class="footer-main">
         <div class="footer-brand-block">
-          <h2 id="detail-footer-title">A better way to show brochure samples</h2>
-          <p>A curated viewing experience for clients to preview polished brochure work without receiving editable or full-resolution source PDFs.</p>
+          <h2 id="detail-footer-title">Make your brochure with CWS.</h2>
+          <p>We take care of the copy, the design, and the print. You get a brochure that's cohesive, polished, and ready to hand out, without the back-and-forth.</p>
           <img class="footer-branding" src="assets/images/logos/foot-branding.svg" alt="Creative Web Services" />
         </div>
         <div class="footer-columns" aria-label="CWS contact">
