@@ -298,48 +298,6 @@ const brochures = [
       outside: `${PDF_PATH}/willow-grove-recovery-outside.pdf`,
       inside: `${PDF_PATH}/willow-grove-recovery-inside.pdf`,
     },
-  },
-  {
-    title: "Prostate Artery Embolization",
-    category: "Vascular care",
-    format: "Bifold brochure",
-    tags: ["Bifold brochure", "8.5 x 11 inches"],
-    thumbnail: `${IMAGE_PATH}/prostate-artery-embolization-outside.png`,
-    pdf: `${PDF_PATH}/prostate-artery-embolization-outside.pdf`,
-    mockup: `${IMAGE_PATH}/prostate-artery-embolization-outside.png`,
-    mockups: {
-      outside: `${IMAGE_PATH}/prostate-artery-embolization-outside.png`,
-      inside: `${IMAGE_PATH}/prostate-artery-embolization-inside.png`,
-    },
-    sides: {
-      outside: `${IMAGE_PATH}/prostate-artery-embolization-outside.png`,
-      inside: `${IMAGE_PATH}/prostate-artery-embolization-inside.png`,
-    },
-    pdfs: {
-      outside: `${PDF_PATH}/prostate-artery-embolization-outside.pdf`,
-      inside: `${PDF_PATH}/prostate-artery-embolization-inside.pdf`,
-    },
-  },
-  {
-    title: "Venogram Pamphlet",
-    category: "Vascular care",
-    format: "Bifold brochure",
-    tags: ["Bifold brochure", "8.5 x 11 inches"],
-    thumbnail: `${IMAGE_PATH}/venogram-pamphlet-outside.png`,
-    pdf: `${PDF_PATH}/venogram-pamphlet-outside.pdf`,
-    mockup: `${IMAGE_PATH}/venogram-pamphlet-outside.png`,
-    mockups: {
-      outside: `${IMAGE_PATH}/venogram-pamphlet-outside.png`,
-      inside: `${IMAGE_PATH}/venogram-pamphlet-inside.png`,
-    },
-    sides: {
-      outside: `${IMAGE_PATH}/venogram-pamphlet-outside.png`,
-      inside: `${IMAGE_PATH}/venogram-pamphlet-inside.png`,
-    },
-    pdfs: {
-      outside: `${PDF_PATH}/venogram-pamphlet-outside.pdf`,
-      inside: `${PDF_PATH}/venogram-pamphlet-inside.pdf`,
-    },
   }
 ];
 
@@ -359,8 +317,6 @@ const brochureDescriptions = {
   "Argo ABA": "An ABA therapy brochure designed to make service information feel clear, modern, and reassuring for families.",
   "Gradual Behavioral Health": "A behavioral health brochure created to introduce care services with a calm, professional, and approachable presentation.",
   "Gradual Behavioral Health II": "A second brochure concept for Gradual Behavioral Health with a refreshed structure for presenting support and service information.",
-  "Prostate Artery Embolization": "A vascular care bifold brochure designed to explain a medical procedure in a clear, patient-friendly format.",
-  "Venogram Pamphlet": "A vascular care pamphlet built to present procedure information, patient education, and clinical next steps clearly."
 };
 
 brochures.forEach((brochure) => {
