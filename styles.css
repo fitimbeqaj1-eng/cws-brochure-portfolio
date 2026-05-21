@@ -363,6 +363,32 @@ h2 {
   text-transform: uppercase;
 }
 
+.brochure-select-field {
+  display: grid;
+  gap: 8px;
+}
+
+.brochure-select-field select {
+  appearance: none;
+  background:
+    linear-gradient(45deg, transparent 50%, #04112d 50%) right 16px center / 7px 7px no-repeat,
+    linear-gradient(135deg, #f8b51d, #ffd676);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #04112d;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 650;
+  min-height: 44px;
+  padding: 0 38px 0 14px;
+  width: 100%;
+}
+
+.brochure-select-field select:focus-visible {
+  outline: 3px solid rgba(248, 181, 29, 0.32);
+  outline-offset: 3px;
+}
+
 .segmented {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;

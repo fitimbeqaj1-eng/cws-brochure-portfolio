@@ -734,6 +734,7 @@ const trifold = document.querySelector("#trifold");
 const foldRange = document.querySelector("#foldRange");
 const foldValue = document.querySelector("#foldValue");
 const sideButtons = document.querySelectorAll("[data-side]");
+const brochureSelect = document.querySelector("#brochureSelect");
 const grid = document.querySelector("#portfolioGrid");
 const carousel = document.querySelector("#brochureCarousel");
 const carouselTrack = document.querySelector("#carouselTrack");
@@ -760,6 +761,9 @@ function setBrochureImage() {
 function setCurrentBrochure(index) {
   currentIndex = (index + trifoldBrochures.length) % trifoldBrochures.length;
   setBrochureImage();
+  if (brochureSelect) {
+    brochureSelect.value = String(currentIndex);
+  }
   carouselTrack.querySelectorAll(".preview-card").forEach((card) => {
     const cardIndex = Number(card.dataset.previewIndex);
     card.classList.toggle("is-active", cardIndex === currentIndex);
@@ -786,6 +790,16 @@ function setFold(value) {
   trifold.classList.toggle("is-folded", fold > 0.55);
   foldRange.value = String(value);
   foldValue.textContent = `${value}%`;
+}
+
+function renderBrochureSelect() {
+  if (!brochureSelect) {
+    return;
+  }
+
+  brochureSelect.innerHTML = trifoldBrochures
+    .map((brochure, index) => `<option value="${index}">${brochure.title}</option>`)
+    .join("");
 }
 
 function renderCarousel() {
@@ -844,6 +858,10 @@ sideButtons.forEach((button) => {
   });
 });
 
+brochureSelect?.addEventListener("change", (event) => {
+  setCurrentBrochure(Number(event.target.value));
+});
+
 carouselTrack.addEventListener("click", (event) => {
   const card = event.target.closest("[data-preview-index]");
 
@@ -863,6 +881,7 @@ document.querySelector("#openBrochure").addEventListener("click", () => setFold(
 document.querySelector("#closeBrochure").addEventListener("click", () => setFold(100));
 foldRange.addEventListener("input", (event) => setFold(event.target.value));
 
+renderBrochureSelect();
 renderCarousel();
 renderGrid();
 setBrochureImage();
