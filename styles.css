@@ -370,7 +370,10 @@ h2 {
 
 .brochure-select-field span {
   color: rgba(238, 246, 255, 0.82);
+  display: block;
   line-height: 1;
+  text-align: right;
+  width: 100%;
 }
 
 .brochure-select-field select {
