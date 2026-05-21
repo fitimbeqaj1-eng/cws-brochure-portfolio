@@ -364,8 +364,10 @@ h2 {
 }
 
 .viewer-controls label.brochure-select-field {
+  align-items: center;
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  grid-template-columns: 82px minmax(0, 1fr);
   justify-content: stretch;
 }
 
