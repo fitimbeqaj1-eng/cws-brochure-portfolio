@@ -758,7 +758,7 @@ function setBrochureImage() {
   trifold.style.setProperty("--brochure-image", imageUrl(brochure.sides[currentSide]));
 }
 
-function setCurrentBrochure(index) {
+function setCurrentBrochure(index, options = {}) {
   currentIndex = (index + trifoldBrochures.length) % trifoldBrochures.length;
   setBrochureImage();
   if (brochureSelect) {
@@ -769,9 +769,11 @@ function setCurrentBrochure(index) {
     card.classList.toggle("is-active", cardIndex === currentIndex);
     card.setAttribute("aria-pressed", String(cardIndex === currentIndex));
   });
-  carouselTrack
-    .querySelector(`[data-preview-index="${currentIndex}"]`)
-    ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  if (options.scrollCarousel !== false) {
+    carouselTrack
+      .querySelector(`[data-preview-index="${currentIndex}"]`)
+      ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }
 }
 
 function updateTickerDistance() {
@@ -859,7 +861,7 @@ sideButtons.forEach((button) => {
 });
 
 brochureSelect?.addEventListener("change", (event) => {
-  setCurrentBrochure(Number(event.target.value));
+  setCurrentBrochure(Number(event.target.value), { scrollCarousel: false });
 });
 
 carouselTrack.addEventListener("click", (event) => {
