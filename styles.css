@@ -371,6 +371,10 @@ h2 {
   justify-content: stretch;
 }
 
+.viewer-controls label.brochure-select-field--bare {
+  grid-template-columns: 1fr;
+}
+
 .brochure-select-field span {
   color: rgba(238, 246, 255, 0.82);
   display: block;
