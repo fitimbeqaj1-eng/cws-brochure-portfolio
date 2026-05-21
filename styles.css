@@ -364,14 +364,13 @@ h2 {
 }
 
 .brochure-select-field {
-  align-items: center;
   display: grid;
-  gap: 10px;
-  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 8px;
 }
 
 .brochure-select-field span {
-  color: rgba(238, 246, 255, 0.78);
+  color: rgba(238, 246, 255, 0.82);
+  line-height: 1;
 }
 
 .brochure-select-field select {
@@ -384,11 +383,18 @@ h2 {
   box-shadow: inset 0 0 0 1px rgba(4, 17, 45, 0.1);
   color: #04112d;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: clamp(0.78rem, 1.8vw, 0.88rem);
   font-weight: 650;
-  min-height: 40px;
+  min-height: 42px;
+  overflow: hidden;
   padding: 0 34px 0 12px;
+  text-overflow: ellipsis;
   width: 100%;
+}
+
+.brochure-select-field option {
+  color: #04112d;
+  font-size: 0.95rem;
 }
 
 .brochure-select-field select:focus-visible {
@@ -1391,6 +1397,10 @@ body {
 }
 
 @media (max-width: 420px) {
+  .brochure-select-field select {
+    font-size: 0.78rem;
+  }
+
   .site-header {
     padding-inline: 12px;
   }
